@@ -51,13 +51,23 @@ This function will iterate through the person parameter and console.log the foll
 
 "President person was a great leader."
 */
-
-
+function leaders(person){
+	for (i=0;i<presidents.length;i++){
+	console.log("President "+presidents[i]+" was a great leader.");}
+}
+leaders(presidents);
 
 /* 4) Line Number
 Declare a variable named `stringOfNumbers` and assign its value to an empty string. 
 
 Write a for-loop that concatenates a Number value into that string on each iteration, starting at `10` and continuing up to and including `20`. Console.log your result. It should read "1011121314151617181920"*/
+var stringOfNumbers = "";
+var numberTrain = [10,11,12,13,14,15,16,17,18,19,20];
+for (i=0;i<numberTrain.length;i++){
+	stringOfNumbers += numberTrain[i];
+}
+
+console.log(stringOfNumbers);
 
 
 /* 5) Even Stevens
@@ -66,7 +76,13 @@ Declare a variable named `evenNumArr` and assign its value to an empty array.
 Write a for-loop that will push even numbers to the `evenNumArr` array. We want to push 50 even even numbers starting from 0.
 Console.log your results.
 */
-
+var evenNumArr =[];
+for (i=0;i<51;i++){
+	if(i%2 === 0){
+	evenNumArr.push(i);
+	}
+}
+console.log(evenNumArr);
 
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
@@ -74,7 +90,14 @@ Declare a variable named `oddSum` and assign it to the Number value 0.
 Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want to add 50 odd numbers starting from 1.
 Console.log your results.
 */
-  
+  var oddSum =0;
+  for (i=0; i <51; i++){
+  	if(i%2 !== 0){
+//  		console.log(oddSum,"+",i);
+  		oddSum += i;
+  	}
+  }
+  console.log(oddSum);
 
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
@@ -82,7 +105,13 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
-
+var oopsArray = [ 'turn' ,'', 'down' ,'', 'for' ,'', 'what' ];
+for(i=1;i<oopsArray.length;i++){
+	if(i%2 !== 0){
+		oopsArray[i] = "nope";
+	}
+}
+console.log(oopsArray);
 
 /* 8) Is It There Oops
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
@@ -95,7 +124,9 @@ down
 nope
 turn
 */
-
+for (i=6;i>=0;i--){
+	console.log(oopsArray[i]);
+}
 
 /* 9) Siesta Time
 Declare a variable named `napSchedule` and assign its value to the following array: `[false, false, true, false, true, true]`
@@ -106,7 +137,21 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
+var napSchedule = [false, false, true, false, true, true];
+var text = ""; 
+function nap(arr){
+	for ( i=0; i<napSchedule.length; i++){
+		if(napSchedule[i] === true){
+			 text = "ZzZzZzZz";
+		}else{
+		 text = "Gotta get coding!";
 
+		}
+	console.log(text);
+	}
+
+}
+nap(napSchedule);
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
@@ -120,6 +165,17 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
 
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+copyValuesArray =[];
+
+function copyArray(originArray,destinationArray){
+	for (i=0;i<valuesArray.length;i++){
+		destinationArray[i]=originArray[i];
+	}
+
+}
+copyArray(valuesArray,copyValuesArray);
+console.log(copyValuesArray);
 
 /*Final Boss*/
 
