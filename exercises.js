@@ -184,8 +184,20 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote ="Good night, sweet prince!";
 
+function findLongestChar(textFromMovie){
+	var asArr = textFromMovie.split(" ");
+	var largest = "";
+	for (i=0; i<asArr.length ;i++){
+		if(asArr[i].length>largest.length){
+			  largest = asArr[i];
 
+		}
+	}
+	return largest;
+}
+console.log(findLongestChar(topQuote));
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
 Write a function named `generateArrayOfStrings` which takes a single argument `storage`. This function will return a new Array with only `String` values inside of it.
@@ -194,16 +206,34 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
 
 
-
+function generateArrayOfStrings(storage){
+	var newArray = [];
+	for (i=0;i<storage.length;i++){
+		if (typeof storage[i] === typeof "" /*"string"*/){
+			newArray.push(storage[i]);
+		}
+	
+	}
+	return newArray;
+}
+console.log(generateArrayOfStrings(miscStorage));
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each and Every Highway. But More, Much More Than This. I Did It My Way."  
 */
 
 var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
-
-
+function SentenceCase(text){
+	var textAsArr= text.split(" ");
+	var adjustedText="";
+	for ( i=0;i<textAsArr.length;i++){
+		adjustedText += (textAsArr[i].charAt(0)).toUpperCase()+textAsArr[i].slice(1)+ " ";
+	}
+	return adjustedText;
+}
+console.log(SentenceCase(myWay));
 
 /* 14) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
@@ -215,4 +245,53 @@ The function will iterate through the `cohort` argument and check each student's
 If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
 Console.log your result.
 */
+
+var currentCohort =
+ [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+/*The function will iterate through the `cohort` argument and check each student's `enrolled` property.
+If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
+Console.log your result.*/
+function graduateAndSetNewClass(cohort){
+for (i=0; i<cohort.length; i++) {
+	if()
+}
+}
+}
 
