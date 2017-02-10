@@ -290,8 +290,12 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.*/
 function graduateAndSetNewClass(cohort){
 for (i=0; i<cohort.length; i++) {
-	if()
+	if(cohort[i].enrolled === true){
+		cohort[i].graduated = true;
+	}else{
+		cohort[i].enrolled = true;
+	}
+	}
+	return cohort;
 }
-}
-}
-
+console.log(graduateAndSetNewClass(currentCohort));
