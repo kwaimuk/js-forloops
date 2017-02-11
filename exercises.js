@@ -140,7 +140,7 @@ Inside of this function write a for-loop that will iterate through the `napSched
 var napSchedule = [false, false, true, false, true, true];
 var text = ""; 
 function nap(arr){
-	for ( i=0; i<napSchedule.length; i++){
+	for ( var i=0; i<napSchedule.length; i++){
 		if(napSchedule[i] === true){
 			 text = "ZzZzZzZz";
 		}else{
@@ -169,7 +169,7 @@ var valuesArray = [99, 66, 829, 1941, 8, 76];
 copyValuesArray =[];
 
 function copyArray(originArray,destinationArray){
-	for (i=0;i<valuesArray.length;i++){
+	for (i=0;i<originArray.length;i++){
 		destinationArray[i]=originArray[i];
 	}
 
