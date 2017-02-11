@@ -77,7 +77,7 @@ Write a for-loop that will push even numbers to the `evenNumArr` array. We want 
 Console.log your results.
 */
 var evenNumArr =[];
-for (i=0;i<51;i++){
+for (i=0;i<50;i++){
 	if(i%2 === 0){
 	evenNumArr.push(i);
 	}
@@ -175,7 +175,7 @@ function copyArray(originArray,destinationArray){
 
 }
 copyArray(valuesArray,copyValuesArray);
-console.log(copyValuesArray);
+console.log("copied to copyValuesArray",copyValuesArray);
 
 /*Final Boss*/
 
@@ -229,7 +229,7 @@ function SentenceCase(text){
 	var textAsArr= text.split(" ");
 	var adjustedText="";
 	for ( i=0;i<textAsArr.length;i++){
-		adjustedText += (textAsArr[i].charAt(0)).toUpperCase()+textAsArr[i].slice(1)+ " ";
+		adjustedText += textAsArr[i].charAt(0).toUpperCase()+textAsArr[i].slice(1)+ " ";
 	}
 	return adjustedText;
 }
